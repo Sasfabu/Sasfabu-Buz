@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Sasfabu - Sainvil's family business.</title>
+    <meta
+        content="Somos una empresa tecnológica con más de 9 años impulsando el crecimiento de los pequeños negocios, a través de una amplia variedad de soluciones transaccionales seguras, rápidas, eficaces y rentables."
+        name="description">
+    <meta name="keywords" content="Sasfabu, transferencia internacional, full carga, negocios">
+
+    <link href="images/favicon.png" rel="icon">
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    </script>
+</head>
+
+<body>
+
+    <!-- MENÚ SUPERIOR DE INDEX.HTML -->
+    <header id="header" class="header fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo nav-link d-flex align-items-center">
+                <img src="images/logo-sasfabu.png" width="85" height="85" alt="Logo Sasfabu">
+            </a>
+
+            <nav id="navbar" class="navbar">
+                <ul class="align-items-center">
+                    <li><a class="nav-link scrollto active" href="index.html">Inicio</a></li>
+                    <li><a class="nav-link scrollto" href="#about">Quiénes Somos</a></li>
+                    <li>Iniciar Sesión</a></li>
+                    <li class="dropdown"><a href="#"><span>Servicios</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#services">Recargas de tiempo aire</a></li>
+                            <li><a href="#services">Recargas internacionales</a></li>
+                            <li><a href="#services">Transferencias internacionales</a></li>
+                            <li><a href="#services">Soluciones Fintech</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link" href="soluciones.html">Soluciones</a></li>
+                    <li><a class="nav-link scrollto" href="#footer">Contacto</a></li>
+
+                    <!-- ÁREA DE ACCESO SUPERIOR DERECHA -->
+                    <li class="ms-lg-4 d-flex align-items-center gap-3 bloque-acceso">
+                        <span class="flag-icon" style="font-size: 20px;">🇨🇱</span>
+                        <a href="login.html" class="nav-login p-0 d-flex align-items-center gap-1"
+                            style="font-size: 15px; font-weight: 500;">
+                            <i class="bi bi-person-circle" style="font-size: 18px;"></i> Iniciar Sesión
+                        </a>
+                        <a href="#hero" class="btn-empezar-navbar text-white"
+                            style="background-color: #ff1744; padding: 8px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; text-decoration: none;">
+                            Empezar Ahora <i class="bi bi-arrow-right-short"></i>
+                        </a>
+                    </li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- SECCIÓN PRINCIPAL CON FORMULARIO DE REGISTRO INTEGRADO -->
+    <section id="hero" class="d-flex align-items-center"
+        style="background: linear-gradient(rgba(0, 26, 51, 0.45), rgba(0, 26, 51, 0.45)), url('images/fondo.png') no-repeat center center fixed !important; background-size: cover !important; min-height: 100vh; padding: 140px 0 60px 0;">
+        <div class="container">
+            <div class="row gy-4 align-items-center">
+
+                <!-- Columna Izquierda: Mensaje Principal -->
+                <div class="col-lg-6 d-flex flex-column justify-content-center text-center text-lg-start">
+                    <h1 data-aos="fade-up" style="color: #ffffff !important; font-size: 48px; font-weight: 700;">
+                        Impulsando el crecimiento <br> de tu negocio
+                    </h1>
+                    <p data-aos="fade-up" data-aos-delay="100"
+                        style="color: rgba(255,255,255,0.8); font-size: 18px; margin-bottom: 30px;">
+                        Únete a la plataforma tecnológica líder y transforma tu comercio con soluciones transaccionales
+                        rápidas y seguras.
+                    </p>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <a href="soluciones.html"
+                            class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center text-decoration-none">
+                            <span style="color: #ffffff !important;">Conoce nuestras soluciones</span>
+                            <i class="bi bi-arrow-right" style="color: #ffffff; margin-left: 5px;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Formulario de Registro Estilo Chile -->
+                <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="300">
+                    <div class="card-registro">
+                        <h2>¡Empecemos!</h2>
+                        <p class="subtitle">Llena el formulario para crear tu cuenta y comenzar a vender en minutos.</p>
+
+                        <!-- FORMULARIO CONECTADO A TU ENDPOINT DE FORMSPREE -->
+                        <form action="https://formspree.io/f/xljrnpvy" method="POST">
+                            <div class="mb-3">
+                                <label class="form-label-custom">Nombre</label>
+                                <input type="text" name="nombre" class="form-control-custom" placeholder="Nombre"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label-custom">Apellido</label>
+                                <input type="text" name="apellido" class="form-control-custom" placeholder="Apellido"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label-custom">Teléfono</label>
+                                <input type="tel" name="telefono" class="form-control-custom"
+                                    placeholder="56 9 1234 1234" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label-custom">Correo Electrónico</label>
+                                <input type="email" name="email" class="form-control-custom"
+                                    placeholder="tu-correo@gmail.com" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label-custom">RUT (sin guión)</label>
+                                <input type="text" name="rut" class="form-control-custom" placeholder="12345678K"
+                                    required>
+                            </div>
+
+                            <div class="mb-3 form-check d-flex align-items-center gap-2">
+                                <input type="checkbox" class="form-check-input" id="terms" required
+                                    style="margin-top: 0;">
+                                <label class="form-check-label text-muted" for="terms"
+                                    style="font-size: 12px; line-height: 1.2;">
+                                    Acepto los <a href="#" class="text-primary text-decoration-underline">Términos y
+                                        Condiciones</a> y el <a href="#"
+                                        class="text-primary text-decoration-underline">Aviso de Privacidad</a>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn-submit-custom">Empezar Ahora</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= SECCIÓN DE SERVICIOS FINANCIEROS SASFABU ======= -->
+    <section id="services" class="services section-bg py-5" style="background-color: #f4f6f9; color: #121212;">
+        <div class="container" data-aos="fade-up">
+
+            <!-- Encabezado de la Sección -->
+            <div class="section-header text-center mb-5">
+                <h2 style="color: #001a33; font-weight: 700;">Nuestros Servicios Financieros</h2>
+                <p style="color: #666;">Soluciones tecnológicas transaccionales rápidas, eficaces y seguras para tu
+                    negocio.</p>
+            </div>
+
+            <!-- Fila de la Grilla (Row) con los 4 Servicios principales -->
+            <div class="row gy-4">
+
+                <!-- Servicio 1: Tiempo Aire -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#seccion-formulario" style="text-decoration: none; display: block; height: 100%;">
+                        <div class="service-box"
+                            style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0px 0px 20px rgba(0,0,0,0.05); text-align: center; height: 100%; transition: transform 0.3s ease;">
+                            <div class="icon mb-3" style="font-size: 36px; color: #4facfe;"><i class="bi bi-phone"></i>
+                            </div>
+                            <h3 style="font-size: 20px; color: #001a33; font-weight: 700;">Recargas de Tiempo Aire</h3>
+                            <p style="font-size: 14px; color: #666;">Venta de saldo para telefonía móvil nacional de
+                                manera rápida y sin complicaciones.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Servicio 2: Internacionales -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#seccion-formulario" style="text-decoration: none; display: block; height: 100%;">
+                        <div class="service-box"
+                            style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0px 0px 20px rgba(0,0,0,0.05); text-align: center; height: 100%; transition: transform 0.3s ease;">
+                            <div class="icon mb-3" style="font-size: 36px; color: #4facfe;"><i class="bi bi-globe"></i>
+                            </div>
+                            <h3 style="font-size: 20px; color: #001a33; font-weight: 700;">Recargas Internacionales</h3>
+                            <p style="font-size: 14px; color: #666;">Envío de saldo y paquetes de datos a teléfonos
+                                móviles en múltiples países al instante.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Servicio 3: Transferencias -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-box"
+                        style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0px 0px 20px rgba(0,0,0,0.05); text-align: center; height: 100%;">
+                        <div class="icon mb-3" style="font-size: 36px; color: #4facfe;"><i class="bi bi-cash-coin"></i>
+                        </div>
+                        <h3 style="font-size: 20px; color: #001a33; font-weight: 700;">Transferencias</h3>
+                        <p style="font-size: 14px; color: #666;">Envío y recepción de dinero internacional con los más
+                            altos estándares de seguridad y confianza.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 4: Soluciones Fintech -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-box"
+                        style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0px 0px 20px rgba(0,0,0,0.05); text-align: center; height: 100%;">
+                        <div class="icon mb-3" style="font-size: 36px; color: #4facfe;"><i class="bi bi-cpu"></i></div>
+                        <h3 style="font-size: 20px; color: #001a33; font-weight: 700;">Soluciones Fintech</h3>
+                        <p style="font-size: 14px; color: #666;">Herramientas digitales avanzadas diseñadas para
+                            potenciar las transacciones de tu comercio diario.</p>
+                    </div>
+                </div>
+
+                <!-- FORMULARIO DE RECARGAS MUNDIALES (Ubicado abajo ocupando espacio completo y centrado) -->
+                <div id="seccion-formulario" class="col-12 mt-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                            <div class="service-box"
+                                style="background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0px 10px 30px rgba(0,0,0,0.05);">
+
+                                <h3
+                                    style="font-size: 24px; color: #001a33; font-weight: 700; margin-bottom: 8px; text-align: center;">
+                                    Realizar Recarga Mundial
+                                </h3>
+                                <p style="font-size: 14px; color: #666; margin-bottom: 25px; text-align: center;">
+                                    Ingresa los datos del destinatario para enviar saldo de forma instantánea.
+                                </p>
+
+                                <form id="form-recarga">
+                                    <!-- Campo Teléfono -->
+                                    <div class="mb-3">
+                                        <label for="input-telefono" class="form-label"
+                                            style="color: #001a33; font-weight: 600; font-size: 14px;">
+                                            Número de Celular (Con código de país)
+                                        </label>
+                                        <input type="tel" class="form-control" id="input-telefono"
+                                            placeholder="+56912345678" required
+                                            style="border-radius: 6px; padding: 12px; border: 1px solid #ced4da;">
+                                    </div>
+
+                                    <!-- Campo Monto -->
+                                    <div class="mb-4">
+                                        <label for="input-monto" class="form-label"
+                                            style="color: #001a33; font-weight: 600; font-size: 14px;">
+                                            Monto a recargar (Valor en saldo)
+                                        </label>
+                                        <input type="number" class="form-control" id="input-monto"
+                                            placeholder="Ej: 5000" required
+                                            style="border-radius: 6px; padding: 12px; border: 1px solid #ced4da;">
+                                    </div>
+
+                                    <!-- Botón de Envío -->
+                                    <button type="submit" class="btn w-100"
+                                        style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; font-weight: 700; padding: 14px; border-radius: 6px; border: none; box-shadow: 0px 4px 15px rgba(79, 172, 254, 0.3); cursor: pointer;">
+                                        Procesar Recarga Ahora
+                                    </button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- Cierre del row principal -->
+        </div> <!-- Cierre del container -->
+    </section>
+
+    <!-- ESPACIO PUBLICITARIO EN EL PIE DE PÁGINA -->
+    <div class="publicidad-footer text-center my-4">
+        <div class="container">
+            <p class="txt-publicidad">PUBLICIDAD</p>
+            <img src="images/publicidad_horizontal.jpg" class="img-fluid" alt="Anuncio Pie de Página">
+        </div>
+    </div>
+
+    </main>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-5 col-md-12 footer-info">
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <img src="images/logo-sasfabu.png" width="85" height="85" alt="Logo Sasfabu">
+                    </a>
+                    <p>Somos una empresa tecnológica con más de 9 años impulsando el crecimiento de los pequeños
+                        negocios, a través de una amplia variedad de soluciones transaccionales seguras, rápidas,
+                        eficaces y rentables.</p>
+                    <div class="social-links d-flex mt-4">
+                        <a href="javascript:void(0);" class="twitter" title="Próximamente"><i
+                                class="bi bi-twitter"></i></a>
+                        <a href="https://facebook.com" class="facebook" target="_blank" rel="noopener"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://instagram.com" class="instagram" target="_blank" rel="noopener"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://linkedin.com" class="linkedin" target="_blank" rel="noopener"><i
+                                class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6 footer-links">
+                    <h4>Enlaces útiles</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Inicio</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Productos</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Servicios</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Aliados</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Contáctanos</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-6 footer-links">
+                    <h4>Nuestros servicios</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Recargas de tiempo aire</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Recargas internacionales</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Transferencias internacionales</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Soluciones Fintech</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-chevron-compact-up"></i></a>
+
+    <!-- CONTROL DE SCRIPTS JAVASCRIPT -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
