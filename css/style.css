@@ -1,0 +1,411 @@
+/* ==========================================
+   ESTILOS GENERALES Y FONDO DE LA PÁGINA
+========================================== */
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+#hero.hero {
+    background: linear-gradient(rgba(0, 26, 51, 0.40), rgba(0, 26, 51, 0.40)), url('../images/fondo-transacciones.jpg.png') no-repeat center center fixed !important;
+    background-size: cover !important;
+    min-height: 100vh;
+    padding: 140px 0 60px 0;
+}
+
+/* Cambia las letras del título principal a color blanco brillante */
+#hero.hero h1 {
+    color: #ffffff !important;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   ESTILOS DE LA BARRA DE NAVEGACIÓN (NAVBAR)
+========================================== */
+.header {
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 20px 0;
+    background: #001a33;
+    /* Fondo azul marino para el menú */
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff !important;
+    /* Texto blanco en el menú */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar .active {
+    color: #00f2fe !important;
+    /* Color celeste brillante al pasar el cursor */
+}
+
+/* Menú Desplegable (Dropdown) */
+.navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #ffffff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.navbar .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #001a33 !important;
+}
+
+.navbar .dropdown ul a:hover {
+    color: #4facfe !important;
+}
+
+.navbar .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
+
+/* ==========================================
+   ESTILOS DE LOS BLOQUES DE PUBLICIDAD
+========================================== */
+.txt-publicidad {
+    font-size: 10px;
+    color: #666666;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.publicidad-lateral {
+    background-color: #f4f6f9;
+    border: 1px dashed #cccccc;
+    padding: 15px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.publicidad-footer {
+    background-color: #f4f6f9;
+    border-top: 1px dashed #cccccc;
+    border-bottom: 1px dashed #cccccc;
+    padding: 15px 0;
+}
+
+.publicidad-footer img {
+    max-height: 90px;
+    width: auto;
+}
+
+/* Forzar texto principal y botón en color blanco brillante */
+#hero h1,
+#hero .col-lg-12 h1,
+.hero h1 {
+    color: #ffffff !important;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+#hero .btn-get-started,
+#hero .btn-get-started span,
+.hero .btn-get-started span {
+    color: #ffffff !important;
+}
+
+/* Efecto de elevación interactivo en las casillas de servicios */
+.service-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 30px rgba(79, 172, 254, 0.2) !important;
+}
+
+/* Estilos para el bloque de acceso superior derecho */
+.bloque-acceso {
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-empezar-navbar:hover {
+    background-color: #d50000 !important;
+    box-shadow: 0px 4px 15px rgba(255, 23, 68, 0.4);
+    transform: scale(1.03);
+}
+
+.nav-login:hover {
+    color: #ff1744 !important;
+}
+
+/* Ajuste responsivo para teléfonos móviles */
+@media (max-width: 991px) {
+    .bloque-acceso {
+        flex-direction: column;
+        align-items: flex-start !important;
+        border-left: none;
+        padding-left: 30px;
+        margin-top: 15px;
+        gap: 15px !important;
+    }
+
+    .navbar .bloque-acceso a {
+        padding: 0 !important;
+    }
+}
+
+/* ==========================================
+   ESTILOS COMPLEMENTARIOS PARA EL FORMULARIO
+========================================== */
+.card-registro {
+    background-color: #f0f4f9;
+    /* Fondo gris/azul muy suave */
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.card-registro h2 {
+    color: #0d47a1 !important;
+    /* Azul intenso */
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.card-registro .subtitle {
+    color: #1565c0;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.form-label-custom {
+    color: #0d47a1;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.form-control-custom {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    border: 1px solid #b0bec5;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #37474f;
+    transition: all 0.3s ease;
+}
+
+.form-control-custom:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.15);
+}
+
+.form-control-custom::placeholder {
+    color: #90a4ae;
+}
+
+/* Botón de envío fucsia/rojo redondeado */
+.btn-submit-custom {
+    width: 100%;
+    background-color: #ff1744;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-submit-custom:hover {
+    background-color: #d50000;
+    box-shadow: 0px 4px 15px rgba(255, 23, 68, 0.4);
+    transform: translateY(-1px);
+}
+
+/* ==========================================
+   DISEÑO ADAPTATIVO PARA TELÉFONOS MÓVILES
+========================================== */
+@media (max-width: 991px) {
+
+    /* Muestra el icono de hamburguesa y oculta la lista original */
+    .mobile-nav-toggle {
+        display: block !important;
+        color: #ffffff;
+        font-size: 28px;
+        cursor: pointer;
+        line-height: 0;
+        transition: 0.5s;
+    }
+
+    .navbar ul {
+        display: none;
+        /* Oculta el menú lateral por defecto */
+        position: fixed;
+        top: 90px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        z-index: 9999;
+        overflow-y: auto;
+        padding: 10px 0;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        transition: 0.3s;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Modifica el texto del menú dentro del celular a color oscuro */
+    .navbar a,
+    .navbar a:focus {
+        color: #001a33 !important;
+        padding: 10px 20px;
+    }
+
+    .navbar a:hover,
+    .navbar .active {
+        color: #ff1744 !important;
+    }
+
+    /* Muestra la lista cuando la clase esté activa mediante JavaScript */
+    .navbar-mobile ul {
+        display: flex !important;
+    }
+
+    /* Estructura vertical para el bloque de registro y login en el celular */
+    .bloque-acceso {
+        flex-direction: column;
+        align-items: flex-start !important;
+        border-left: none !important;
+        padding-left: 20px !important;
+        margin-top: 15px;
+        gap: 15px !important;
+        width: 100%;
+    }
+
+    .btn-empezar-navbar {
+        width: calc(100% - 40px);
+        text-align: center;
+        margin: 5px 20px;
+    }
+}
+
+/* ==========================================
+   DISEÑO ADAPTATIVO PARA TELÉFONOS MÓVILES
+========================================== */
+@media (max-width: 991px) {
+
+    /* Muestra el icono de hamburguesa y oculta la lista original */
+    .mobile-nav-toggle {
+        display: block !important;
+        color: #ffffff;
+        font-size: 28px;
+        cursor: pointer;
+        line-height: 0;
+        transition: 0.5s;
+    }
+
+    .navbar ul {
+        display: none;
+        /* Oculta el menú lateral por defecto */
+        position: fixed;
+        top: 90px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        z-index: 9999;
+        overflow-y: auto;
+        padding: 10px 0;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        transition: 0.3s;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Modifica el texto del menú dentro del celular a color oscuro */
+    .navbar a,
+    .navbar a:focus {
+        color: #001a33 !important;
+        padding: 10px 20px;
+    }
+
+    .navbar a:hover,
+    .navbar .active {
+        color: #ff1744 !important;
+    }
+
+    /* Muestra la lista cuando la clase esté activa mediante JavaScript */
+    .navbar-mobile ul {
+        display: flex !important;
+    }
+
+    /* Estructura vertical para el bloque de registro y login en el celular */
+    .bloque-acceso {
+        flex-direction: column;
+        align-items: flex-start !important;
+        border-left: none !important;
+        padding-left: 20px !important;
+        margin-top: 15px;
+        gap: 15px !important;
+        width: 100%;
+    }
+
+    .btn-empezar-navbar {
+        width: calc(100% - 40px);
+        text-align: center;
+        margin: 5px 20px;
+    }
+}
