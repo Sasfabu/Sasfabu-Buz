@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Ventas - Sasfabu</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        .navbar-custom {
+            background-color: #0d6efd;
+        }
+
+        .balance-card {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra de Navegación Superior -->
+    <nav class="navbar navbar-dark navbar-custom px-3">
+        <span class="navbar-brand mb-0 h1">Sasfabu Recargas</span>
+        <button id="btn-logout" class="btn btn-outline-light btn-sm">Cerrar Sesión</button>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Tarjeta de Saldo Disponible -->
+            <div class="col-md-4 mb-4">
+                <div class="card balance-card p-4 shadow">
+                    <h5 class="card-title text-uppercase opacity-75">Tu Saldo Disponible</h5>
+                    <h2 class="display-5 fw-bold" id="txt-saldo">$0.00</h2>
+                    <span class="small opacity-50" id="txt-vendedor">Cargando vendedor...</span>
+                </div>
+            </div>
+
+            <!-- Formulario para vender la recarga -->
+            <div class="col-md-8">
+                <div class="card p-4 shadow bg-white">
+                    <h4 class="text-secondary mb-3">Vender Nueva Recarga</h4>
+                    <form id="recarga-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Número de Teléfono</label>
+                                <input type="tel" class="form-control" placeholder="Ej: 0987654321" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Operador / Compañía</label>
+                                <select class="form-select">
+                                    <option value="">Selecciona operador...</option>
+                                    <option value="claro">Claro</option>
+                                    <option value="movistar">Movistar</option>
+                                    <option value="tigo">Tigo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Monto de la Recarga ($)</label>
+                            <input type="number" class="form-control" placeholder="Monto a descontar de tu saldo"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 py-2 fw-bold">Procesar Recarga Real</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tu script de lógica que conectaremos luego -->
+    <script type="module" src="dashboard.js"></script>
+</body>
+
+</html>
