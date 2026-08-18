@@ -4,14 +4,16 @@ import { getAuth, signInWithEmailAndPassword } from "https://gstatic.com";
 
 // ====== AQUÍ PEGA TU CONFIGURACIÓN DE FIREBASE ======
 // Reemplaza todo este bloque con los datos que copiaste de tu pantalla de Firebase
+// Tu configuración real de Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyA1B2C3D4E5F6G7H8I9J0...",
-    authDomain: "://firebaseapp.com",
-    projectId: "sasfabu-buz",
-    storageBucket: "://appspot.com",
-    messagingSenderId: "987654321012",
-    appId: "1:987654321012:web:a1b2c3d4e5f6g7h8i9j0"
+  apiKey: "AIzaSyD-D3GcXWVcIWXw4CeAaKhiUZ-q2MrBjIs",
+  authDomain: "sasfabu-buz.firebaseapp.com",
+  projectId: "sasfabu-buz",
+  storageBucket: "sasfabu-buz.firebasestorage.app",
+  messagingSenderId: "61061141106",
+  appId: "1:61061141106:web:b25b3401ac1f774e62a8eb"
 };
+
 
 // ====================================================
 
