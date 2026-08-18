@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
+    <title>Iniciar Sesión - Control de Ventas</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f6f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .login-box { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 100%; max-width: 350px; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 350px;
+        }
         h2 { text-align: center; margin-bottom: 20px; color: #333; }
         .input-group { margin-bottom: 15px; }
         label { display: block; margin-bottom: 5px; color: #666; font-size: 14px; }
@@ -28,12 +43,50 @@
                 <label>Contraseña</label>
                 <input type="password" id="passwordInput" required placeholder="••••••••">
             </div>
-            <button type="submit" id="btnIngresar">Ingresar al Panel</button>
+            <button type="submit">Ingresar al Panel</button>
         </form>
     </div>
 
-    <!-- Forzamos la versión 100 para borrar cualquier rastro de la caché vieja -->
-    <script type="module" src="login.js?v=100"></script>
+    <!-- CÓDIGO DE JAVASCRIPT INTEGRADO (Solución definitiva a errores de archivo) -->
+    <script type="module">
+        import { initializeApp } from "https://gstatic.com";
+        import { getAuth, signInWithEmailAndPassword } from "https://gstatic.com";
+
+        // Tus credenciales oficiales de Firebase
+        const firebaseConfig = {
+          apiKey: "AIzaSyD-D3GcXWVcIWXw4CeAaKhiUZ-q2MrBjIs",
+          authDomain: "://firebaseapp.com",
+          projectId: "sasfabu-buz",
+          storageBucket: "sasfabu-buz.firebasestorage.app",
+          messagingSenderId: "61061141106",
+          appId: "1:61061141106:web:b25b3401ac1f774e62a8eb"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        const loginForm = document.getElementById("loginForm");
+
+        if (loginForm) {
+            loginForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                
+                const email = document.getElementById("emailInput").value.trim();
+                const password = document.getElementById("passwordInput").value;
+
+                // Conexión directa a Firebase
+                signInWithEmailAndPassword(auth, email, password)
+                    .then((userCredential) => {
+                        alert("¡Ingreso exitoso!");
+                        window.location.href = "index.html"; // Te envía al panel de control
+                    })
+                    .catch((error) => {
+                        console.error("Error al autenticar:", error);
+                        alert("Error de acceso: Verifica que el correo o la contraseña sean correctos.");
+                    });
+            });
+        }
+    </script>
 
 </body>
 </html>
