@@ -1,10 +1,7 @@
-// AVISO DE DIAGNÓSTICO: Si ves esta alerta al cargar la página, significa que la caché se rompió con éxito
-alert("¡Sistema de inicio de sesión cargado correctamente!");
-
 import { initializeApp } from "https://gstatic.com";
 import { getAuth, signInWithEmailAndPassword } from "https://gstatic.com";
 
-// Tus credenciales reales de Firebase
+// Tus credenciales reales de Firebase descubiertas anteriormente
 const firebaseConfig = {
   apiKey: "AIzaSyD-D3GcXWVcIWXw4CeAaKhiUZ-q2MrBjIs",
   authDomain: "://firebaseapp.com",
@@ -23,21 +20,18 @@ if (loginForm) {
     loginForm.addEventListener("submit", (e) => {
         e.preventDefault();
         
-        alert("Procesando datos... Conectando con Firebase.");
-
         const email = document.getElementById("emailInput").value.trim();
         const password = document.getElementById("passwordInput").value;
 
+        // Petición directa a Firebase
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 alert("¡Ingreso exitoso!");
-                window.location.href = "index.html"; 
+                window.location.href = "index.html"; // Te redirige al panel principal
             })
             .catch((error) => {
-                console.error("Error completo:", error);
-                alert("Error de acceso: " + error.message);
+                console.error("Error al autenticar:", error);
+                alert("Error de acceso: Revisa que el correo y la contraseña sean correctos.");
             });
     });
-} else {
-    alert("Error interno: No se encontró el formulario en el HTML.");
 }
