@@ -37,23 +37,22 @@
         <form id="loginForm">
             <div class="input-group">
                 <label>Correo Electrónico</label>
-                <!-- IMPORTANTE: El id="emailInput" debe existir aquí -->
                 <input type="email" id="emailInput" required placeholder="correo@ejemplo.com">
             </div>
             <div class="input-group">
                 <label>Contraseña</label>
-                <!-- IMPORTANTE: El id="passwordInput" debe existir aquí -->
                 <input type="password" id="passwordInput" required placeholder="••••••••">
             </div>
             <button type="submit">Ingresar al Panel</button>
         </form>
     </div>
 
-    <!-- LÓGICA DIRECTA CONECTADA A LOS IDENTIFICADORES DE ARRIBA -->
+    <!-- LÓGICA DE FIREBASE INTEGRADA SIN ERRORES DE RUTA -->
     <script type="module">
         import { initializeApp } from "https://gstatic.com";
         import { getAuth, signInWithEmailAndPassword } from "https://gstatic.com";
 
+        // Tus credenciales reales y verificadas de Firebase
         const firebaseConfig = {
           apiKey: "AIzaSyD-D3GcXWVcIWXw4CeAaKhiUZ-q2MrBjIs",
           authDomain: "://firebaseapp.com",
@@ -63,11 +62,12 @@
           appId: "1:61061141106:web:b25b3401ac1f774e62a8eb"
         };
 
+        // Inicializamos los servicios de Google
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
 
-        // Alerta de diagnóstico inicial para comprobar que el código arranca
-        alert("¡Página lista para conectar con Firebase!");
+        // Alerta de control: nos avisará en la pantalla si el código arranca sin trabarse
+        alert("¡Código limpio cargado! El formulario está listo.");
 
         const loginForm = document.getElementById("loginForm");
 
@@ -75,32 +75,22 @@
             loginForm.addEventListener("submit", (e) => {
                 e.preventDefault();
                 
-                // Leemos los valores usando los IDs garantizados
-                const emailInput = document.getElementById("emailInput");
-                const passwordInput = document.getElementById("passwordInput");
+                const email = document.getElementById("emailInput").value.trim();
+                const password = document.getElementById("passwordInput").value;
 
-                if (!emailInput || !passwordInput) {
-                    alert("Error: No se encontraron las casillas de texto en la pantalla.");
-                    return;
-                }
+                alert("Verificando credenciales en los servidores de Firebase...");
 
-                const email = emailInput.value.trim();
-                const password = passwordInput.value;
-
-                alert("Enviando credenciales a los servidores de Google...");
-
+                // Intento de conexión directa con los usuarios registrados
                 signInWithEmailAndPassword(auth, email, password)
                     .then((userCredential) => {
-                        alert("¡Ingreso exitoso!");
-                        window.location.href = "index.html"; 
+                        alert("¡Ingreso exitoso! Redirigiendo...");
+                        window.location.href = "index.html"; // Te envía a tu panel principal
                     })
                     .catch((error) => {
-                        console.error("Error detectado:", error);
-                        alert("Error de acceso: El correo o la contraseña no coinciden con Firebase.");
+                        console.error("Error detallado:", error);
+                        alert("Error de acceso: El correo o la contraseña no coinciden en Firebase.");
                     });
             });
-        } else {
-            alert("Error crítico: El formulario 'loginForm' no existe en el HTML.");
         }
     </script>
 
